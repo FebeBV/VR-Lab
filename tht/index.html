@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Hague Tech</title>
+    <meta name="description" content="The Hague Tech">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <a-assets>
+        <a-asset-item id="THT-obj" src="THTlogo.obj"></a-asset-item>
+        <a-asset-item id="THT-mtl" src="THTlogo.mtl"></a-asset-item>
+    </a-assets>
+
+    <a-scene background="color: #FAFAFA">
+
+
+        <a-entity>
+            <a-animation attribute="rotation" easing="linear" dur="6000" to="0 360 0" repeat="indefinite">
+            </a-animation>
+            <a-entity rotation="0 0 0">
+                <a-obj-model src="#THT-obj" mtl="#THT-mtl">
+                </a-obj-model>
+            </a-entity>
+        </a-entity>
+
+        <a-entity camera="active: true" look-controls wasd-controls position="0 1 2" data-aframe-default-camera></a-entity>
+
+
+
+
+    </a-scene>
+</body>
+
+</html>

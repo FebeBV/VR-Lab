@@ -1,0 +1,6 @@
+/* This stylesheet is meant for custom styles, on top of the Bone Template */
+
+#myEmbeddedScene {
+    width: 100%;
+    height: 600px;
+}
