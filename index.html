@@ -113,19 +113,32 @@
                     </a-scene> -->
 
                     <a-assets embedded>
-                        <a-asset-item id="THT-obj" src="THTlogo.obj"></a-asset-item>
-                        <a-asset-item id="THT-mtl" src="THTlogo.mtl"></a-asset-item>
+                        <a-asset-item id="VRLabMask-obj" src="VRLabMask.obj"></a-asset-item>
+                        <a-asset-item id="VRLabMask-mtl" src="VRLabMask.mtl"></a-asset-item>
+                        <a-asset-item id="VRLabText-obj" src="VRLabText.obj"></a-asset-item>
+                        <a-asset-item id="VRLabText-mtl" src="VRLabText.mtl"></a-asset-item>
                     </a-assets>
 
-                    <a-scene vr-mode-ui="enabled: false" background="color: #FAFAFA" embedded>
-                        <a-entity position="0 0 -1">
-                            <a-animation attribute="rotation" easing="linear" dur="6000" to="0 360 0" repeat="indefinite">
+                    <a-scene vr-mode-ui="enabled: false" background="color: #FFF" embedded>
+
+                        <a-entity position="0 0.2 -0.5">
+                            <a-animation attribute="rotation" easing="linear" dur="8000" to="0 360 0" repeat="indefinite">
                             </a-animation>
-                            <a-entity rotation="0 0 0">
-                                <a-obj-model src="#THT-obj" mtl="#THT-mtl">
+                            <a-entity rotation="90 0 0">
+                                <a-obj-model src="#VRLabText-obj" mtl="#VRLabText-mtl">
                                 </a-obj-model>
                             </a-entity>
                         </a-entity>
+
+                        <a-entity position="0 1.3 -0.5" scale="1.2 1.2 1.2">
+                            <a-animation attribute="rotation" delay="200" from="20 20 10" to="-5 -5 -10" repeat="indefinite" easing="linear" direction="alternate" repeat="20" dur="2500">
+                            </a-animation>
+                            <a-entity rotation="90 0 0">
+                                <a-obj-model src="#VRLabMask-obj" mtl="#VRLabMask-mtl">
+                                </a-obj-model>
+                            </a-entity>
+                        </a-entity>
+
                         <a-entity camera="active: true" look-controls wasd-controls position="0 1 2" data-aframe-default-camera></a-entity>
                     </a-scene>
                     <!-- </div> -->
