@@ -18,73 +18,20 @@
     <!-- Menu-->
     <div class="nav-container">
         <ul class="nav">
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Portfolio </a>
                 <ul class="dropdown">
+                    <li><a href="community/index.html">THT Community</a></li>
                     <li><a href="https://www.febe.online/vr/tht/v1/" target="_blank">THT Escape Room</a></li>
                     <li><a href="https://www.febe.online/vr/cryptosafari/" target="_blank">Crypto Safari Wildlife Park</a></li>
-                    <li><a href="www.leekrider.com">Leek Rider</a></li>
+                    <li><a href="https://www.leekrider.com" target="_blank">Leek Rider</a></li>
                 </ul>
             </li>
             <li><a href="">Contact</a></li>
-            <!-- <li><a href="#">Pages </a>
-                <ul class="dropdown">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/about-us.html">About Us</a></li>
-                    <li><a href="pages/about-me.html">About Me</a></li>
-                    <li><a href="pages/services.html">Services</a></li>
-                    <li><a href="pages/error-404.html">Error 404</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
-                </ul>
-            </li> -->
-            <!-- <li><a href="#">Blog </a>
-                <ul class="dropdown">
-                    <li><a href="pages/blog.html">Blog - Classic</a></li>
-                    <li><a href="pages/blog-images.html">Blog - Thumbs</a></li>
-                    <li><a href="pages/blog-post.html">Post - Classic</a></li>
-                    <li><a href="pages/blog-post-image.html">Post - Hero</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Features </a>
-                <ul class="dropdown">
-                    <li><a href="pages/hero-fs.html">Fullscreen Hero</a></li>
-                    <li><a href="pages/hero-dark.html">Dark Hero</a></li>
-                    <li><a href="pages/boxed-layout.html">Boxed Layout</a></li>
-                    <li><a href="pages/tera-slider.html">Tera Slider <span class="label">3.1</span></a></li>
-                    <li><a href="pages/tera-carousel.html">Carousel</a></li>
-                    <li><a href="pages/elements.html">Elements</a></li>
-                    <li><a href="pages/menu-classic.html">Classic Menu</a></li>
-                    <li><a href="pages/one-page.html">One-page Website</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Shop </a>
-                <ul class="dropdown">
-                    <li><a href="pages/shop.html">Shop overview</a></li>
-                    <li><a href="pages/product.html">Product page</a></li>
-                    <li><a href="pages/cart.html">Cart</a></li>
-                </ul>
-            </li> -->
-            <!-- <li><a href="http://themeforest.net/item/bone-responsive-agency-portfolio-html-template/15299321">Buy Bone  </a></li> -->
         </ul>
-        <!-- <div class="copyright">2016 &copy; Bone Template. All rights reserved.</div> -->
         <div class="exit"></div>
-        <!-- <ul class="social">
-            <li>
-                <a href="#" class="fa fa-twitter"></a>
-            </li>
-            <li>
-                <a href="#" class="fa fa-dribbble"></a>
-            </li>
-            <li>
-                <a href="#" class="fa fa-facebook"></a>
-            </li>
-            <li>
-                <a href="#" class="fa fa-instagram"></a>
-            </li>
-            <li>
-                <a href="#" class="fa fa-pinterest"></a>
-            </li>
-        </ul> -->
     </div>
+
     <!-- Wrapper-->
     <div id="wrapper" class="container-fluid smooth-transition">
         <!-- Header-->
@@ -113,6 +60,8 @@
                     </a-scene> -->
 
                     <a-assets embedded>
+                        <a-asset-item id="THT-obj" src="THTlogo.obj"></a-asset-item>
+                        <a-asset-item id="THT-mtl" src="THTlogo.mtl"></a-asset-item>
                         <a-asset-item id="VRLabMask-obj" src="VRLabMask.obj"></a-asset-item>
                         <a-asset-item id="VRLabMask-mtl" src="VRLabMask.mtl"></a-asset-item>
                         <a-asset-item id="VRLabText-obj" src="VRLabText.obj"></a-asset-item>
@@ -135,6 +84,15 @@
                             </a-animation>
                             <a-entity rotation="90 0 0">
                                 <a-obj-model src="#VRLabMask-obj" mtl="#VRLabMask-mtl">
+                                </a-obj-model>
+                            </a-entity>
+                        </a-entity>
+
+                        <a-entity position="0 0 5">
+                            <a-animation attribute="rotation" easing="linear" dur="6000" to="0 360 0" repeat="indefinite">
+                            </a-animation>
+                            <a-entity rotation="0 0 0">
+                                <a-obj-model src="#THT-obj" mtl="#THT-mtl">
                                 </a-obj-model>
                             </a-entity>
                         </a-entity>
@@ -231,7 +189,7 @@
                         </div>
                     </a>
                     <!-- Portfolio item-->
-                    <a href="www.leekrider.com" target="_blank" class="grid-item">
+                    <a href="https://www.leekrider.com" target="_blank" class="grid-item">
                         <div style="background-image: url(images/thumbs/04.png)" class="thumb"></div>
                         <div class="caption">
                             <div class="type">WebVR & A-frame</div>
